@@ -86,7 +86,7 @@ namespace PK_ScheduleScraper.Services
                 }
             }
 
-            
+            eventList = eventList.OrderBy(e=>e.DayNr).ThenBy(e=>e.EventLP).ToList();
 
             return eventList;
 
