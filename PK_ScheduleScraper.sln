@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PK_ScheduleScraper", "PK_ScheduleScraper\PK_ScheduleScraper.csproj", "{7696C297-6C28-400F-8BDF-FFFC3EAC5046}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7696C297-6C28-400F-8BDF-FFFC3EAC5046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7696C297-6C28-400F-8BDF-FFFC3EAC5046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7696C297-6C28-400F-8BDF-FFFC3EAC5046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7696C297-6C28-400F-8BDF-FFFC3EAC5046}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F45F7393-2CEB-4C4B-A9A7-61D6E3718519}
+	EndGlobalSection
+EndGlobal
