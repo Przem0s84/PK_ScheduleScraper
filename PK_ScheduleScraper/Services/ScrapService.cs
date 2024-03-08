@@ -24,8 +24,7 @@ namespace PK_ScheduleScraper.Services
           
             string urlCongif = $"ScheduleLinks:{teamName}";
             string url = _config[urlCongif];
-            
-            var DividePattern = @"(?<name>[A-Z][\w\sąćęłńóśźżŻŹ]*)(?<eventType>P0\d|W|Ć|S|L0\d|K0\d).*\-\((?<weekType>[NnPp]).*(?<location>[A-Z]\d{1,3}.*)|(?<name>J angielski).*\-\((?<weekType>[PpNn]).*(?<location>[A-Z]\d{1,3}.*)|(?<name>[A-Z][\w\sąćęłńóśźżŻŹ]*)(?<eventType>P0\d|W|Ć|Ś|L0\d|K0\d).*\-\((?<weekType>[NnPp])\)?.*\s[\w]\-?\w*|(?<name>WF).*(?<eventType>\((?:K|M|K\+M)\)).*(?<location>[A-Z][\w]*\d?)";
+            var DividePattern = $@"{_config["DividePattern"]}";
 
             var web = new HtmlWeb();
             web.OverrideEncoding = Encoding.UTF8;
