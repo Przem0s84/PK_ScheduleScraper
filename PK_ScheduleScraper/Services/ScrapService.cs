@@ -5,6 +5,7 @@ using System.Text;
 using HtmlAgilityPack;
 using HtmlAgilityPack.CssSelectors.NetCore;
 using PK_ScheduleScraper.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace PK_ScheduleScraper.Services
 {
@@ -24,6 +25,7 @@ namespace PK_ScheduleScraper.Services
           
             string urlCongif = $"ScheduleLinks:{teamName}";
             string url = _config[urlCongif];
+            if(url is null) { throw new BadRequest($"{teamName} Team doesn't exist in url-s list"); }
             var DividePattern = $@"{_config["DividePattern"]}";
 
             var web = new HtmlWeb();
