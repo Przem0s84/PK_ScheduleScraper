@@ -30,7 +30,7 @@ namespace PK_ScheduleScraper.Controllers
             if(!ModelState.IsValid) { return BadRequest(ModelState); }
             var scrappedList = await _scraperService.ScrapEventList(eventProp.TeamName);
 
-            var myEvents = scrappedList.Where(e => e.EventType == eventProp.LabGropName|| e.EventType == eventProp.ProjGroupName || e.EventType == eventProp.CompLabGroupName||e.EventType=="W"||e.EventType=="Ć"||e.EventType=="S" ||e.EventType.Contains("(K") ||e.EventType.Contains("M")||e.EventType.Contains("undefined")).Where(e=>e.WeekType==eventProp.WeekType).OrderBy(e=>e.DayNr).ThenBy(e=>e.EventLP).ToList();
+            var myEvents = scrappedList.Where(e => e.EventType == eventProp.LabGropName|| e.EventType == eventProp.ProjGroupName || e.EventType == eventProp.CompLabGroupName||e.EventType=="W"||e.EventType=="Ć"||e.EventType=="S" ||e.EventType.Contains("(K") ||e.EventType.Contains("M")||e.EventType.Contains("undefined")).Where(e=>e.WeekType==eventProp.WeekType||e.WeekType=="undefined or both").OrderBy(e=>e.DayNr).ThenBy(e=>e.EventLP).ToList();
 
 
             return Ok(myEvents);
